@@ -8,13 +8,10 @@ function rndInt(min, max) {
     return null;
   }
 
-  let rand = min + Math.random() * (max + 1 - min);
+  const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
 
-for (let i = 0; i < 10; i++) {
-  console.log(rndInt(2, 5));
-}
 
 /***** */
 function rndFloatPoint(min, max, n) {
@@ -35,8 +32,4 @@ function rndFloatPoint(min, max, n) {
   let rand = Math.random() * (max - min) + min;
   rand = rand.toFixed(n);
   return rand;
-}
-
-for (let i = 0; i < 10; i++) {
-  console.log(rndFloatPoint(1.1, 5.5, 2));
 }
