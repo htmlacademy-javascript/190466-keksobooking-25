@@ -9,13 +9,9 @@ function generateNumber(min, max) {
   }
 
   if (min >= max) {
-    let temp = min;
+    const temp = min;
     min = max;
     max = temp;
-
-    console.log(min);
-    console.log(max);
-    console.log(`***`);
   }
 
   const random = min + Math.random() * (max + 1 - min);
@@ -37,7 +33,7 @@ function generateNumberFloatPoint(min, max, decimalPlaces) {
   }
 
   if (min >= max) {
-    let temp = min;
+    const temp = min;
     min = max;
     max = temp;
   }
