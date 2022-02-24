@@ -12,6 +12,8 @@ function rndInt(min, max) {
   return Math.floor(rand);
 }
 
+rndInt(2, 5);
+
 
 /***** */
 function rndFloatPoint(min, max, n) {
@@ -33,3 +35,5 @@ function rndFloatPoint(min, max, n) {
   rand = rand.toFixed(n);
   return rand;
 }
+
+rndFloatPoint(2, 5, 3);
