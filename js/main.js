@@ -1,39 +1,54 @@
-function rndInt(min, max) {
+function generateNumber(min, max) {
   // случайное число от min до max+1
   if (min < 0) {
     min = 0;
   }
 
-  if (min >= max) {
-    return null;
+  if (max < 0) {
+    max = 0;
   }
 
-  const rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
+  if (min >= max) {
+    let temp = min;
+    min = max;
+    max = temp;
+
+    console.log(min);
+    console.log(max);
+    console.log(`***`);
+  }
+
+  const random = min + Math.random() * (max + 1 - min);
+  return Math.floor(random);
 }
 
-rndInt(2, 5);
-
+generateNumber(5, -5);
 
 /***** */
-function rndFloatPoint(min, max, n) {
+function generateNumberFloatPoint(min, max, decimalPlaces) {
   // случайное число от min до max
 
   if (min < 0) {
     min = 0;
   }
 
+  if (max < 0) {
+    max = 0;
+  }
+
   if (min >= max) {
-    return null;
+    let temp = min;
+    min = max;
+    max = temp;
   }
 
-  if (n < 0) {
-    n = 0;
+  if (decimalPlaces < 0) {
+    decimalPlaces = 0;
   }
 
-  let rand = Math.random() * (max - min) + min;
-  rand = rand.toFixed(n);
-  return rand;
+  let random = Math.random() * (max - min) + min;
+  random = random.toFixed(decimalPlaces);
+  return random;
 }
 
-rndFloatPoint(2, 5, 3);
+generateNumberFloatPoint(2, 5, 3);
